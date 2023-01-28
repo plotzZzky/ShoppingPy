@@ -1,0 +1,12 @@
+{% if items %}
+    {% for item in items %}
+        <div class="div-list-item" onclick="removeFromYourList(this, '{{ item.id }}');">
+            <a class="list-item-name"> {{ item.name }} </a>
+            <a><input type="number" value="{{ item.amount }}" onclick="event.stopPropagation();"
+                      onfocusout="changeAmount('{{ item.id }}', this);" class="amount-input"> Unidades </a>
+        </div>
+
+    {% endfor %}
+{% else %}
+    <a> Sua lista esta vazia </a>
+{% endif %}

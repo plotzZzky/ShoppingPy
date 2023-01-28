@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+    {% block title %} Compras {% endblock %}
+    {% load static %}
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'app.css' %}">
+        <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
+    {% endblock %}
+
+    {% block page %}
+
+        <div class="div-topbar">
+
+            <div class="div-align-btns">
+                <select name="lists" id="listSelector" class="list-selector" onchange="getLists();">
+                    <option disabled selected value> Selecione a lista </option>
+                    <option value="0"> Mercado </option>
+                    <option value="1"> Farmacia </option>
+                </select>
+
+                <button class="topbar-btns" onclick="buyList();"><i class="fa-solid fa-check fa-gl"></i> Compras feitas </button>
+                <button class="topbar-btns" onclick="clearList();"><i class="fa-solid fa-trash fa-gl"></i> Esvaziar </button>
+                <button class="topbar-btns" onclick="showNewItem();"><i class="fa-solid fa-file-circle-plus"></i> Criar produto </button>
+                <div class="div-find-item">
+                    <input type="text" placeholder="Buscar item" class="find-item" oninput="filterLists(this);">
+                    <button class="clear-find-item"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+        </div>
+
+    <div class="app-div-view-list">
+        <div class="app-container-div-lis">
+            <div class="div-list-title"> Sua Lista de compras atual </div>
+            <div class="app-div-list" id="myList">
+
+            </div>
+        </div>
+
+        <div class="app-container-div-lis">
+            <div class="div-list-title"> Items disponiveis </div>
+            <div class="app-div-list" id="listAll">
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="modalNew" class="modal">
+        {% include "new.html" %}
+    </div>
+
+    {% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+    {% block title %} Sobre {% endblock %}
+
+    {% block page %}
+
+        <h1 class="title"> Sobre:</h1>
+        <a> Projeto de site de lista de compras e dispensa feitos com Django e PostgreSql </a>
+        <h3> Caractersiticas: </h3>
+        <p>- Permite salvar suas listas e acessar de qualquer lugar </p>
+        <p>- Lista separada por categorias </p>
+        <p>- Dispensa com data de validade dos produtos </p>
+
+        <h2> Estrutura: </h2>
+        <h3> Usuario e login: </h3>
+        <a class="about-link" href="/users/login/"><h3>/users/login/ - Pagina de login  e Cadastro </h3></a>
+        <a class="about-link" href="/users/config/"><h3>/users/config/ - Pagina para editar a conta </h3></a>
+        <a class="about-link" href="/about/"><h3>/about/ - Pagina sobre o projeto </h3></a>
+        <h3> Listas </h3>
+        <a class="about-link" href="/list/"><h3>/list/ - Pagina com a lista de compras </h3></a>
+        <a class="about-link" href="/pantry/"><h3>/pantry/ - Pagina com a lista da dispensa </h3></a>
+
+
+
+    {% endblock %}

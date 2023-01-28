@@ -1,0 +1,10 @@
+<div class="div-new-item" id="newItem">
+    <a class="title"> Novo produto: </a>
+    <form method="POST" action="/list/item/new/">
+        {% csrf_token %}
+        {{ form.name }}
+        {{ form.validate }}
+        {{ form.type }}
+        <input type="submit" value="Salvar" class="new-submit">
+    </form>
+</div>

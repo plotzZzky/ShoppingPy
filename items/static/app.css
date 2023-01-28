@@ -1,0 +1,214 @@
+/* APP */
+.div-topbar {
+    position: fixed;
+    width: 100%;
+    height: 52px;
+    margin: auto;
+    margin-top: 0px;
+    padding: 4px;
+    background-color: var(--color_sec);
+    box-shadow: var(--shadow);
+}
+
+.div-align-btns {
+    display: inline-flex;
+    flex-direction: row;
+    width: 100%;
+    height: 44px;
+    margin: auto;
+    margin-top: 8px;
+}
+
+.topbar-btns {
+    width: 200px;
+    height: auto;
+    padding: 4px;
+    margin: 4px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.topbar-btns i {
+    padding: 4px;
+}
+
+.list-selector {
+    width: 140px;
+    height: auto;
+    margin: 4px;
+    padding: 4px;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+}
+
+.div-find-item {
+    width: 100%;
+    height: auto;
+    margin: 4px;
+    margin-right: 16px;
+    padding: 0;
+    display: inline-flex;
+    position: relative;
+}
+
+.find-item {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 4px;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+}
+
+.clear-find-item {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    right: 0;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Lists */
+.app-div-view-list {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 56px;
+    padding-top: 8px;
+    display: inline-flex;
+}
+
+.app-container-div-lis {
+    width: 50%;
+    height: 100%;
+    min-height: 84vh;
+    margin: 32px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.div-list-title {
+    position: relative;
+    width: 30%;
+    height: auto;
+    left: 35%;
+    top: 1px;
+    background-color: var(--background);
+    border: 1px solid lightgrey;
+    border-bottom: none;
+}
+
+.app-div-list {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding-top: 16px;
+    min-height: 84vh;
+    border: 1px solid lightgrey;
+}
+
+.div-list-item {
+    width: 90%;
+    height: 32px;
+    margin: 4px;
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    display: inline-flex;
+    justify-content: space-between;
+    border: 1px solid var(--color_sec);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.list-item-name {
+    font-size: 18px;
+}
+
+.amount-input {
+    width: 40px;
+    height: 32px;
+    margin: auto;
+    margin-top: -2px;
+    border: 1px solid lightgrey;
+    outline: none;
+}
+
+/* New item */
+.div-new-item {
+    width: 40%;
+    height: auto;
+    margin: auto;
+    margin-top: 8%;
+    padding: 4px;
+    border: 2px solid var(--color_pri);
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+    background-color: var(--background);
+}
+
+.input-name {
+    width: 90%;
+    height: auto;
+    padding: 4px;
+    margin: 8px;
+}
+
+.select-type {
+    width: 20%;
+    height: auto;
+    margin: 8px;
+    padding: 4px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+}
+
+.input-validate {
+    width: 90%;
+    height: auto;
+    margin: 8px;
+    padding: 4px;
+}
+
+.new-submit {
+    width: 20%;
+    height: auto;
+    padding: 4px;
+    margin: 8px;
+    margin-left: 40%;
+    margin-right: 40%;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--color_pri);
+    color: var(--color_sec);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    left: 0px;
+    top: 0px;
+    background-color: var(--modal_back);
+    z-index: 999;
+}
+
+.div-add-item{
+    width: 40%;
+    height: auto;
+    margin: auto;
+    margin-top: 8%;
+    padding: 4px;
+    border: 2px solid var(--color_sec);
+    border-radius: 4px;
+    background-color: var(--background);
+    box-shadow: var(--shadow);
+}

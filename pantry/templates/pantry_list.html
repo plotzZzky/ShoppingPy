@@ -1,0 +1,20 @@
+{% if items %}
+    {% for item in items %}
+        <div class="div-list-item" onclick="getProperties('{{ item.id }}');">
+            <a class="list-item-name">{{ item.name }} </a>
+
+            {% if today >= item.alert_date %}
+                <a><i class="fa-solid fa-circle-exclamation"></i> Validade </a>
+            {% endif %}
+
+            {% if item.last_day is not None %}
+                <a> Validade: {{ item.last_day|date:"d/m/Y" }} </a>
+            {% else %}
+                <a> Validade não definida </a>
+            {% endif %}
+        </div>
+
+    {% endfor %}
+{% else %}
+    <a> Sua lista esta vazia </a>
+{% endif %}

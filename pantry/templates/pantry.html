@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+    {% block title %} Dispensa {% endblock %}
+    {% load static %}
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'pantry.css' %}">
+        <script type="text/javascript" src="{% static 'js/pantry.js' %}"></script>
+    {% endblock %}
+
+    {% block page %}
+        <div class="div-topbar">
+
+            <div class="div-align-btns">
+                <select name="lists" id="listSelector" class="list-selector" onchange="getPantry();">
+                    <option disabled selected value> Selecione a lista </option>
+                    <option value="0"> Mercado </option>
+                    <option value="1"> Farmacia </option>
+                </select>
+
+                <button class="topbar-btns" onclick="showAlert();"><i class="fa-solid fa-circle-exclamation"></i> Mostra antigos </button>
+                <button class="topbar-btns" onclick="clearList();"><i class="fa-solid fa-trash fa-gl"></i>Esvaziar </button>
+                <div class="div-find-item">
+                    <input type="text" placeholder="Buscar item" class="find-item" oninput="filterLists(this);">
+                    <button class="clear-find-item"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+        </div>
+
+    <div class="app-div-view-list">
+        <div class="app-container-div-lis">
+            <div class="div-list-title"> Sua dispensa </div>
+            <div class="app-div-list" id="myList">
+
+            </div>
+        </div>
+
+        <div class="app-container-div-lis">
+            <div class="div-list-title"> Detalhes </div>
+            <div class="app-div-list" id="pantryProps">
+
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}

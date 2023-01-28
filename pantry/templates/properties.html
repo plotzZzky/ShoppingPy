@@ -1,0 +1,10 @@
+
+    <h2> {{ item.name }} </h2>
+    <input type="date" value="" class="properties-date-input" onfocusout="setProperties('{{ item.id }}')" id="inputDate">
+    {% if item.date is not None %}
+        <p> Data de fabricação: {{ item.date|date:"d/m/Y" }}</p>
+    {% else %}
+        <p> Data de fabricação indefinida </p>
+    {% endif %}
+    <p> Validade de {{ item.validate }} dias, vence no dia {{ item.last_day|date:"d/m/Y" }} </p>
+    <button class="properties-btns" onclick="removeItem({{ item.id }})"> Remover item </button>

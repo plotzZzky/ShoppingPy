@@ -1,0 +1,12 @@
+# ignore archives
+*.log
+*.json
+*.kdbx
+*.sqlite3
+
+
+#ignore folders
+.idea/
+__pycache__/
+/venv/*
+*/migrations
