@@ -1,6 +1,6 @@
 :root {
-    --color_pri: #333;
-    --color_sec: #333;
+    --color_pri: #FF603D;
+    --color_sec: #FF603D;
     --background: white;
     --modal_back: #000000E6;
     --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
@@ -14,6 +14,10 @@
 html, body {
     margin: 0px;
     background-color: var(--background);
+    background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)),url("background.jpg");
+    background-size: 600px 400px;
+    background-repeat: repeat, repeat;
+    background-position: center;
 
 }
 
@@ -32,7 +36,7 @@ html, body {
     color: white;
     text-align: center;
     margin: 2px;
-    margin-top: 4px;
+    margin-top: 2px;
     margin-left: 8px;
     padding:  8px 32px;
     text-decoration: none;
@@ -46,7 +50,7 @@ html, body {
     padding: 8px 12px;
     background-color: var(--color_pri)
     margin: 2px;
-    margin-top: 4px;
+    margin-top: 2px;
     font-size: Inherit;
     font-family: Inherit;
 }
@@ -93,10 +97,21 @@ html, body {
     display: block;
 }
 
+.brand-logo {
+    width: 120px;
+    height: 24px;
+    margin: 0;
+    margin-top: -4px;
+    margin-left: auto;
+    margin-right: 8px;
+    color: white;
+}
+
+/* Content */
 .title{
     text-align: center;
     font-size: 32px;
-    color: grey;
+    color: var(--color_pri);
     font-family: Inherit;
 }
 
@@ -122,6 +137,19 @@ html, body {
 }
 
 /*  About */
+.about-div {
+    width: 40%;
+    height: auto;
+    margin: auto;
+    margin-top: 4%;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--background);
+    box-shadow: var(--shadow);
+}
+
+
 .about-link {
     color: Inherit;
     text-decoration: none;

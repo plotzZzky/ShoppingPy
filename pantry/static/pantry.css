@@ -20,7 +20,8 @@
 }
 
 .topbar-btns {
-    width: 180px;
+    width: 160px;
+    min-width: 160px;
     height: auto;
     padding: 4px;
     margin: 4px;
@@ -103,12 +104,13 @@
 }
 
 .app-div-list {
-    width: 100%;
+    width: 80%;
     height: 100%;
     margin: auto;
     padding-top: 16px;
     min-height: 84vh;
     border: 1px solid lightgrey;
+    background-color: var(--background);
 }
 
 .div-list-item {

@@ -1,8 +1,10 @@
 .login-content {
+    position: absolute;
 	width: 400px;
 	height: auto;
     margin: auto;
-    margin-top: 4%;
+    top: 16%;
+    right: 12%;
     border-radius: 4px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 12px 0 rgba(0, 0, 0, 0.12);
     overflow: hidden;
@@ -43,7 +45,7 @@
     margin-right: 30%;
     margin-left: 30%;
     font-size: 16px;
-    background-color:  #333;
+    background-color:  var(--color_pri);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 5px 12px 0 rgba(0, 0, 0, 0.12);
     color: white;
     border: none;
@@ -52,7 +54,7 @@
 
 #tab-active {
     background-color: white;
-    color: var(--primary);
+    color: var(--color_pri);
 }
 
 input[type=text],
@@ -90,4 +92,29 @@ input[type=password] {
     margin: auto;
     margin-top: 24px;
 
+}
+
+/* Brand */
+.brand {
+    width: 600px;
+    height: 180px;
+    margin: auto;
+    margin-left: 10%;
+    margin-top: 7%;
+    padding: 8px;
+    background-color: #FF603D;
+    border: none;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.brand-name {
+    color: white;
+    font-size: 72px;
+    font-weight: bold;
+}
+
+.brand p {
+    color: white;
+    font-size: 24px;
 }

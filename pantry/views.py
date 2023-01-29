@@ -52,9 +52,9 @@ def remove_from_pantry(request, item_id):
 def pantry_clear(request, list_id):
     user = request.user
     if list_id == 0:
-        request.user.pantry.market.clear()
+        user.pantry.market.clear()
     else:
-        request.user.pharmacy.market.clear()
+        user.pantry.pharmacy.clear()
     return HttpResponse()
 
 

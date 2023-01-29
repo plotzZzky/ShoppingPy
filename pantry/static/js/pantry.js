@@ -16,7 +16,8 @@ function getProperties(itemId) {
 function setProperties(itemId) {
     let input = $('#inputDate').val();
     $.get('http://127.0.0.1:8000/pantry/item=' + itemId + '/date=' + input + '/' , function() {
-        getProperties(itemId)
+        getProperties(itemId);
+        getPantry();
     })
 }
 

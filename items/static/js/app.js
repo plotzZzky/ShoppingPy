@@ -2,6 +2,10 @@ function showNewItem() {
     $("#modalNew").toggle()
 }
 
+function createNewItem() {
+    $.post("http://127.0.0.1:8000/list/item/new/", data={data: frm.serialize(),})
+}
+
 function getListAll(value) {
     $.get("http://127.0.0.1:8000/list/all/id=" + value + "/", function(data) {
         $("#listAll").html(data);
