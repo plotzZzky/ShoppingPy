@@ -67,7 +67,6 @@ def edit_user(request):
             return redirect('/list/')
         else:
             data = {'form': form}
-            print(form.errors)
             return render(request, 'edit.html', data)
     else:
         form = EditUserForm(user=request.user)

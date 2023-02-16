@@ -10,38 +10,15 @@
 
     {% block page %}
 
-        <div class="brand">
-            <a class="brand-name"> ShoppingPy <i class="fa-solid fa-cart-shopping fa-xl"></i></a>
+    <div class="div-login">
+        <div class="brand-login">
+            <a class="brand-login-name"> ShoppingPy <i class="fa-solid fa-cart-shopping fa-xl"></i></a>
             <p> Controle suas compras na palma de sua mão! </p><br>
         </div>
 
 
-        <div class="login-content">
-            <div class="tabs">
-              <button id="tab-active" style="float: left;" class="tablinks" onclick="showLogin(this)"> Entrar </button>
-              <button  class="tablinks" onclick="showSignup(this)"> Cadastrar </button>
-            </div>
-            <div style="display: block;" class="login-tab" id="Login">
-                <form name="login-form" method="POST" action="/users/login/">
-                    {% csrf_token %}
-                        {{ login.username }}
-                        {{ login.password }}
-                    <input class="submit-input" type="submit" value="Entrar">
-                </form>
-            </div>
+        {% include "login_tabs.html" %}
 
-            <div class="login-tab" id="Signup">
-                <form  method="POST" action="/users/register/">
-                    {% csrf_token %}
-                    {{ signup.username }}
-                    {{ signup.email }}
-                    {{ signup.password1 }}
-                    {{ signup.password2 }}
-                    {{ signup.pwd_db }}
-                    <input class="submit-input" type="submit" value="Cadastrar">
-                </form>
-            </div>
-        </div>
     </div>
 
     {% endblock %}

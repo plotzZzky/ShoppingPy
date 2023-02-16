@@ -91,7 +91,8 @@ class EditUserForm(forms.ModelForm):
     password2 = forms.CharField(required=False, label='Confirm password', widget=forms.PasswordInput(attrs={
         'placeholder': 'Comfirme a senha'}
     ))
-    picture = forms.ImageField(required=False, widget=forms.FileInput(attrs={'id': 'imageField', 'onchange': 'previewImage();'}))
+    picture = forms.ImageField(required=False, widget=forms.FileInput(
+        attrs={'id': 'imageField', 'onchange': 'previewImage();'}))
 
     def username_clean(self, data, user):
         name = user.username

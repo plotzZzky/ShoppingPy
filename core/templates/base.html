@@ -5,6 +5,7 @@
     <title>{% block title %} {% endblock %} - ShoppingPy </title>
     {% load static %}
         <link rel="stylesheet" href="{% static 'styles.css' %}">
+        <script type=text/javascript src="{% static 'js/base.js' %}"></script>
         <script src="https://kit.fontawesome.com/71fde90bd7.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -13,25 +14,40 @@
 
 <body>
     <div class="navbar">
-        <a href="/list/"> Compras </a>
-        <a href="/pantry/"> Dispensa </a>
-        <a href="/about"> Sobre </a>
-        <div class="dropdown">
-            <button class="dropbtn"> Login
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="/users/login"> Entrar </a>
-                <a href="/users/logout"> Sair </a>
-                <a href="/users/config/"> Editar </a>
+        <div class="menu" id="menu">
+            <a class="menu-icon" onclick="OpenMenu()">
+                <i class="fa fa-bars"></i>
+            </a>
+
+            <div class="menu-item">
+                <a href="/"> Compras </a>
+            </div>
+
+            <div class="menu-item">
+                <a href="/pantry/"> Dispensa </a>
+            </div>
+
+            <div class="menu-item">
+                <a href="/about"> Sobre </a>
+            </div>
+
+            <div class="dropdown">
+                <div class="dropdown-menu">
+                    <a class="dropdown-text"> Login <i class="fa fa-caret-down"></i></a>
+                </div>
+                <div class="dropdown-content">
+                    <a href="/users/login"> Entrar </a>
+                    <a href="/users/logout"> Sair </a>
+                    <a href="/users/config/"> Editar </a>
+                </div>
             </div>
         </div>
 
-        <div class="brand-logo">
-            <p> ShoppingPy <i class="fa-solid fa-cart-shopping"></i></p>
+        <div class="brand" onclick="location.href='/'">
+            <i class="fa-solid fa-house"></i>
+            <a class="brand-name"> ShoppingPy</a>
         </div>
     </div>
-
 
     <div class="content">
         {% block page %} {% endblock %}

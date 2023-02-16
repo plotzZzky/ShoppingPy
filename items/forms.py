@@ -8,7 +8,6 @@ Choices = [
 ]
 
 
-
 class ItemForm(forms.ModelForm):
     class Meta:
         model = ItemRef

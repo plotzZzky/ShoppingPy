@@ -3,7 +3,7 @@
     {% block title %} Dispensa {% endblock %}
     {% load static %}
     {% block css %}
-        <link rel="stylesheet" href="{% static 'pantry.css' %}">
+        <link rel="stylesheet" href="{% static 'app.css' %}">
         <script type="text/javascript" src="{% static 'js/pantry.js' %}"></script>
     {% endblock %}
 
@@ -12,7 +12,7 @@
 
             <div class="div-align-btns">
                 <select name="lists" id="listSelector" class="list-selector" onchange="getPantry();">
-                    <option disabled selected value> Selecione a lista </option>
+                    <option disabled selected value> Listas </option>
                     <option value="0"> Mercado </option>
                     <option value="1"> Farmacia </option>
                 </select>

@@ -21,14 +21,14 @@
 }
 
 .topbar-btns {
-    width: 160px;
-    min-width: 160px;
+    width: min(160px, 10vw);
     height: auto;
-    padding: 4px;
+    padding: 2px;
     margin: 4px;
     border: none;
     border-radius: 2px;
     cursor: pointer;
+    font-size: min(0.8rem, 4vw);
 }
 
 .topbar-btns i {
@@ -36,13 +36,13 @@
 }
 
 .list-selector {
-    width: 140px;
+    width: 132px;
     height: auto;
     margin: 4px;
-    padding: 4px;
+    padding: 2px;
     border: none;
     border-radius: 2px;
-    outline: none;
+    font-size: min(0.8rem, 4vw);
 }
 
 .div-find-item {
@@ -67,7 +67,7 @@
 
 .clear-find-item {
     position: absolute;
-    width: 36px;
+    width: 24px;
     height: 36px;
     right: 0;
     border: none;
@@ -76,34 +76,38 @@
 
 /* Lists */
 .app-div-view-list {
-    width: 100%;
+    width: min(1600px, 100%);
     margin: auto;
     margin-top: 56px;
     padding-top: 8px;
-    display: inline-flex;
+    display: flex;
 }
 
 .app-container-div-lis {
-    width: 50%;
+    width: 100%;
     height: 88vh;
-    margin: 32px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin: min(32px, auto);
+    margin-top: 4px;
+    margin-bottom: 8px;
 }
 
 .div-list-title {
     position: relative;
-    width: 30%;
-    height: auto;
-    left: 35%;
-    top: 1px;
+    width: min(200px, 60%);
+    height: 32px;
+    top: 2px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
     background-color: var(--background);
     border: 1px solid lightgrey;
     border-bottom: none;
+    font-size: 1rem;
 }
 
 .app-div-list {
-    width: 80%;
+    width: 96%;
     height: 83vh;
     margin: auto;
     padding-top: 16px;
@@ -140,9 +144,22 @@
     text-align: center;
 }
 
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    left: 0px;
+    top: 0px;
+    background-color: var(--modal_back);
+    z-index: 999;
+}
+
 /* New item */
 .div-new-item {
-    width: 40%;
+    width: min(480px, 90%);
     height: auto;
     margin: auto;
     margin-top: 8%;
@@ -161,13 +178,13 @@
 }
 
 .select-type {
-    width: 20%;
-    height: auto;
-    margin: 8px;
-    padding: 4px;
+    width: 132px;
+    height: 32px;
+    margin: 4px;
+    padding: 2px;
     border: none;
-    border-radius: 4px;
-    outline: none;
+    border-radius: 2px;
+    font-size: 1rem;
 }
 
 .input-validate {
@@ -190,27 +207,36 @@
     color: white;
 }
 
-/* Modal */
-.modal {
-    display: none;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    left: 0px;
-    top: 0px;
-    background-color: var(--modal_back);
-    z-index: 999;
+/* Properties */
+.properties-date-input {
+    width: 112px;
+    height: 24px;
+    text-align: center;
+    outline: none;
 }
 
-.div-add-item{
-    width: 40%;
+.properties-btns {
+    width: 140px;
     height: auto;
-    margin: auto;
-    margin-top: 8%;
     padding: 4px;
-    border: 2px solid var(--color_sec);
+    margin: 4px;
+    border: none;
     border-radius: 4px;
-    background-color: var(--background);
-    box-shadow: var(--shadow);
+    cursor: pointer;
+    color: var(--fontColor_pri);
+    background-color: var(--color_pri);
+}
+
+
+@media screen and (max-width: 720px) {
+    .app-div-view-list {flex-direction: column;}
+    .clear-find-item {display: none}
+    .list-selector {
+        width: 80px;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .topbar-btns {font-size: 0;}
 }
