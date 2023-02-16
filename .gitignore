@@ -3,10 +3,9 @@
 *.json
 *.kdbx
 *.sqlite3
-
+*_initial.py
 
 #ignore folders
 .idea/
 __pycache__/
 /venv/*
-*/migrations
